@@ -58,4 +58,9 @@ public class EmployeeController {
         employeeService.updateEmployee(id, employee);
     }
 
+    @PostMapping("employees/search")
+    public List<Employee> searchEmployee(@RequestBody Employee employee) {
+        return employeeService.searchByFirstName(employee);
+    }
+
 }

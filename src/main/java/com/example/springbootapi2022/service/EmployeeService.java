@@ -31,4 +31,9 @@ public class EmployeeService {
     public void createEmployee(Employee employee) {
         employeeRepository.save(employee);
     }
+
+    public List<Employee> searchByFirstName(Employee employee) {
+        String firstName = employee.getFirstName();
+        return employeeRepository.searchByFirstName(firstName);
+    }
 }

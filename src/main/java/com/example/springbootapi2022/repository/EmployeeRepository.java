@@ -30,4 +30,9 @@ public class EmployeeRepository {
         return entityManager.find(Employee.class, id);
     }
 
+    public List<Employee> searchByFirstName(String firstName) {
+        Query query = entityManager.createQuery("from Employee e where e.firstName = :FIRST_NAME", Employee.class);
+        query.setParameter("FIRST_NAME", firstName);
+        return query.getResultList();
+    }
 }
