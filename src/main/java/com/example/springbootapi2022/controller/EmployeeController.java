@@ -29,14 +29,16 @@ public class EmployeeController {
 
     @GetMapping("/employees/{id}")
     public Employee getEmployee(@PathVariable Integer id) {
-        System.out.println("id: " + id);
+//        System.out.println("id: " + id);
+//
+//        Employee employee = new Employee();
+//        employee.setId(id);
+//        employee.setFirstName("Kan");
+//        employee.setLastName("Ouivirach");
+//
+//        return employee;
 
-        Employee employee = new Employee();
-        employee.setId(id);
-        employee.setFirstName("Kan");
-        employee.setLastName("Ouivirach");
-
-        return employee;
+        return employeeService.getEmployee(id);
     }
 
     @PostMapping("/employees")

@@ -26,4 +26,8 @@ public class EmployeeRepository {
         return query.getResultList();
     }
 
+    public Employee getEmployee(Integer id) {
+        return entityManager.find(Employee.class, id);
+    }
+
 }
