@@ -1,9 +1,7 @@
 package com.example.springbootapi2022.controller;
 
 import com.example.springbootapi2022.Employee;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,6 +29,12 @@ public class EmployeeController {
         employee.setLastName("Ouivirach");
 
         return employee;
+    }
+
+    @PostMapping("/employees")
+    public void createEmployee(@RequestBody Employee employee) {
+        System.out.println("employee firstName: " + employee.getFirstName());
+        System.out.println("employee lastName: " + employee.getLastName());
     }
 
 }
