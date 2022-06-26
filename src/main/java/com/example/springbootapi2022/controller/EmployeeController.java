@@ -45,6 +45,8 @@ public class EmployeeController {
     public void createEmployee(@RequestBody Employee employee) {
         System.out.println("employee firstName: " + employee.getFirstName());
         System.out.println("employee lastName: " + employee.getLastName());
+
+        employeeService.createEmployee(employee);
     }
 
     @PutMapping("/employees/{id}")
