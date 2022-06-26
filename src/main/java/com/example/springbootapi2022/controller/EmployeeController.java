@@ -12,7 +12,6 @@ public class EmployeeController {
 
     @GetMapping("/employees")
     public List<Employee> listAllEmployees() {
-
         Employee employee = new Employee();
         employee.setId(1);
         employee.setFirstName("Kan");
