@@ -2,6 +2,7 @@ package com.example.springbootapi2022.controller;
 
 import com.example.springbootapi2022.entity.Employee;
 import com.example.springbootapi2022.repository.EmployeeRepository;
+import com.example.springbootapi2022.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.List;
 public class EmployeeController {
 
     @Autowired
-    private EmployeeRepository employeeRepository;
+    private EmployeeService employeeService;
 
     @GetMapping("/employees")
     public List<Employee> listAllEmployees() {
@@ -23,7 +24,7 @@ public class EmployeeController {
 //        employee.setLastName("Ouivirach");
 
 //        return Arrays.asList(employee);
-        return employeeRepository.listAllEmployees();
+        return employeeService.listAllEmployees();
     }
 
     @GetMapping("/employees/{id}")
