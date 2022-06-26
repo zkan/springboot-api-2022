@@ -1,7 +1,12 @@
 package com.example.springbootapi2022.dependency;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Customer {
-    private String name;
+    private String name = "Spring Boot";
+
     private Address address;
 
     // Default constructor
@@ -9,6 +14,7 @@ public class Customer {
 
     }
 
+    @Autowired
     public Customer(Address address) {
         this.address = address;
     }

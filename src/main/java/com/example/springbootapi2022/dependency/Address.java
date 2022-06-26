@@ -1,8 +1,11 @@
 package com.example.springbootapi2022.dependency;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
-    private String addressNo;
-    private String addressName;
+    private String addressNo = "99/999";
+    private String addressName = "Tiwanon Village";
 
     public String getAddressNo() {
         return addressNo;
