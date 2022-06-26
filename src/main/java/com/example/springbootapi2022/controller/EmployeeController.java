@@ -1,6 +1,6 @@
 package com.example.springbootapi2022.controller;
 
-import com.example.springbootapi2022.Employee;
+import com.example.springbootapi2022.entity.Employee;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
