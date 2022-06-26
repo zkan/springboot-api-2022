@@ -21,4 +21,11 @@ public class EmployeeService {
         return employeeRepository.getEmployee(id);
     }
 
+    public void updateEmployee(Integer id, Employee employee) {
+        Employee existingEmployee = getEmployee(id);
+        existingEmployee.setFirstName(employee.getFirstName());
+        existingEmployee.setLastName(employee.getLastName());
+        employeeRepository.save(existingEmployee);
+    }
+
 }

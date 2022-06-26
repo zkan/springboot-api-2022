@@ -48,12 +48,12 @@ public class EmployeeController {
     }
 
     @PutMapping("/employees/{id}")
-    public Employee updateEmployee(@PathVariable Integer id, @RequestBody Employee employee) {
+    public void updateEmployee(@PathVariable Integer id, @RequestBody Employee employee) {
         System.out.println("id: " + id);
         System.out.println("employee firstName: " + employee.getFirstName());
         System.out.println("employee lastName: " + employee.getLastName());
 
-        return null;
+        employeeService.updateEmployee(id, employee);
     }
 
 }
