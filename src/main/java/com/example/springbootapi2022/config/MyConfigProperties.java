@@ -10,4 +10,5 @@ import org.springframework.stereotype.Component;
 public class MyConfigProperties {
     private String message;
     private String host;
+    private String uploadPath;
 }

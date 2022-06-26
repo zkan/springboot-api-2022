@@ -25,7 +25,7 @@ public class MyConfigController {
 
     @GetMapping("/config/message2")
     public String getMessage2() {
-        return configProperties.getMessage() + " on " + configProperties.getHost();
+        return configProperties.getMessage() + " on " + configProperties.getHost() + " : " + configProperties.getUploadPath();
     }
 
 }
